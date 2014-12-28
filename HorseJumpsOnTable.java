@@ -37,11 +37,10 @@ public class HorseJumpsOnTable extends Application {
 
         try {
             calcHorsePath(rows, columns, 0, new boolean[rowSize][columnSize]);
-        } catch (RuntimeException e) { // чисто для выхода их рекурсии
-        }
+        } catch (RuntimeException ignore) {/* NOP */}
 
+        /** После подсчетов запускаем наше окно */
         launch(args);
-
     }
 
     @Override
